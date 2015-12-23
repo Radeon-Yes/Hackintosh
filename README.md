@@ -57,3 +57,6 @@ Device (BUS0)\n
 end;
 ```
 
+**config.plist**
+* config.plist/ACPI/SSDT/DropOem/NO (Clover)
+
