@@ -14,7 +14,18 @@
 * Create USB Stick with this guide - http://www.tonymacx86.com/el-capitan-desktop-guides/172672-unibeast-install-os-x-el-capitan-any-supported-intel-based-pc.html
 * Use preset for Intel GPU injection
 * Put the custom UEFI driver inside the EFI partition (mount via http://www.osx86.net/file/49-clover-configurator/)
+* Use MultiBeast
+* > Quick Start > UEFI
+* > Drivers > Network > AppleIntelE1000e
+* > Customize > Intel HD 3000
+* > Customize > Sandy Bridge Core i5 (will be probably replaced with SSDT)
+* > Customize > System Def > MacMini5,1
 * Put nullpowermanagement.kext to the kext/10.11 folder on usb install stick
+
+# After install
+* Put FakeSMC and AppleIntelE1000e.kext to EFI partition to the kext/10.11/
+* Instal smbios
+* 
 
 # Bootloader
 * Clover 3320
