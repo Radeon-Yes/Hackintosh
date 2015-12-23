@@ -17,6 +17,7 @@
 * Use MultiBeast
 * > Quick Start > UEFI
 * > Drivers > Network > AppleIntelE1000e
+* > Drivers > Audio > ALC892
 * > Customize > Intel HD 3000
 * > Customize > Sandy Bridge Core i5 (will be probably replaced with SSDT)
 * > Customize > System Def > MacMini5,1
