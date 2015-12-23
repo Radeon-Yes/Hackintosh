@@ -10,6 +10,12 @@
 * Intel virtualization - Enabled
 * Primary GPU - Integrated (I am using three monitors so one - primary - is in the internal GPU and rest is in GTX560)
 
+# Installation
+* Create USB Stick with this guide - http://www.tonymacx86.com/el-capitan-desktop-guides/172672-unibeast-install-os-x-el-capitan-any-supported-intel-based-pc.html
+* Use preset for Intel GPU injection
+* Put the custom UEFI driver inside the EFI partition (mount via http://www.osx86.net/file/49-clover-configurator/)
+* Put nullpowermanagement.kext to the kext/10.11 folder on usb install stick
+
 # Bootloader
 * Clover 3320
 * Aditional installed drivers can be found here https://github.com/wilima/Hackintosh/tree/master/CLOVER/drivers32UEFI and https://github.com/wilima/Hackintosh/tree/master/CLOVER/drivers64UEFI
