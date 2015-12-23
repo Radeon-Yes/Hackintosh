@@ -18,4 +18,7 @@
 https://github.com/wilima/Hackintosh/blob/master/CLOVER/config.plist
 * SMBIOS - MacMini5,1
 
+# Audio
+I have used this guide for my audio - https://www.reddit.com/r/hackintosh/comments/397wl1/guide_realtek_alc_8xx_1150_with_native_applehda/
+
 
