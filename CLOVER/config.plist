@@ -10,6 +10,8 @@
 			<false/>
 			<key>DropOEM_DSM</key>
 			<false/>
+			<key>Name</key>
+			<string>DSDT.aml</string>
 			<key>ReuseFFFF</key>
 			<false/>
 		</dict>
@@ -23,18 +25,18 @@
 	</dict>
 	<key>Boot</key>
 	<dict>
-		<key>Arguments</key>
-		<string></string>
 		<key>Debug</key>
 		<true/>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
+		<key>Legacy</key>
+		<string>PBR</string>
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
 		<integer>3</integer>
 		<key>XMPDetection</key>
-		<string>Yes</string>
+		<false/>
 	</dict>
 	<key>Devices</key>
 	<dict>
@@ -54,40 +56,72 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<integer>1</integer>
-			<key>ResetHDA</key>
-        		<true/>
+			<string>1</string>
 		</dict>
 		<key>FakeID</key>
 		<dict>
+			<key>ATI</key>
+			<string>0x0</string>
+			<key>IMEI</key>
+			<string>0x0</string>
 			<key>IntelGFX</key>
 			<string>0x01268086</string>
+			<key>LAN</key>
+			<string>0x0</string>
+			<key>NVidia</key>
+			<string>0x0</string>
+			<key>SATA</key>
+			<string>0x0</string>
+			<key>WIFI</key>
+			<string>0x0</string>
+			<key>XHCI</key>
+			<string>0x0</string>
 		</dict>
 		<key>USB</key>
 		<dict>
 			<key>FixOwnership</key>
-			<true/>
+			<false/>
 			<key>Inject</key>
-			<true/>
+			<false/>
 		</dict>
 	</dict>
+	<key>DisableDrivers</key>
+	<array>
+		<string>Nothing</string>
+	</array>
 	<key>GUI</key>
 	<dict>
+		<key>Hide</key>
+		<array>
+			<string>\EFI\BOOT\BOOTX64.EFI</string>
+			<string>Windows</string>
+		</array>
+		<key>Language</key>
+		<string>en:0</string>
 		<key>Mouse</key>
 		<dict>
 			<key>DoubleClick</key>
 			<integer>500</integer>
 			<key>Enabled</key>
-			<false/>
+			<true/>
 			<key>Mirror</key>
 			<false/>
 			<key>Speed</key>
 			<integer>8</integer>
 		</dict>
 		<key>Scan</key>
-		<true/>
+		<dict>
+			<key>Entries</key>
+			<true/>
+			<key>Legacy</key>
+			<string>First</string>
+			<key>Tool</key>
+			<true/>
+		</dict>
+		<key>ScreenResolution</key>
+		<string>1280x1024</string>
 		<key>Theme</key>
-		<string>embedded</string>
+		<string>mac</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -108,7 +142,7 @@
 		<key>AppleRTC</key>
 		<true/>
 		<key>AsusAICPUPM</key>
-		<false/>
+		<true/>
 		<key>Debug</key>
 		<false/>
 		<key>KernelCpu</key>
@@ -123,21 +157,21 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Realtek ALC 892</string>
+				<string>External icons patch</string>
 				<key>Find</key>
 				<data>
-				ixnUEQ==
+				RXh0ZXJuYWw=
 				</data>
 				<key>Name</key>
-				<string>AppleHDA</string>
+				<string>AppleAHCIPort</string>
 				<key>Replace</key>
 				<data>
-				kgjsEA==
+				SW50ZXJuYWw=
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Realtek 10.11. patch</string>
+				<string>10.11-AppleHDA/Realtek ALC...</string>
 				<key>Find</key>
 				<data>
 				gxnUEQ==
@@ -149,6 +183,34 @@
 				AAAAAA==
 				</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>AppleHDA/Resources/xml&gt;zml</string>
+				<key>Find</key>
+				<data>
+				eG1sLnps
+				</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>
+				em1sLnps
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>10.9-10.11-AppleHDA/Realtek ALC892</string>
+				<key>Find</key>
+				<data>
+				ixnUEQ==
+				</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>
+				kgjsEA==
+				</data>
+			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
@@ -156,7 +218,7 @@
 		<key>BooterConfig</key>
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
-		<string>0x11</string>
+		<string>0x3</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
@@ -182,16 +244,21 @@
 		<string>Mac mini</string>
 		<key>Manufacturer</key>
 		<string>Apple Inc.</string>
-		<key>Mobile</key>
-		<false/>
 		<key>ProductName</key>
 		<string>Macmini5,1</string>
 		<key>SerialNumber</key>
-		<string>C02H2F65DJD0</string>
+		<string>C02JFIQLDJD0</string>
 		<key>Trust</key>
 		<false/>
 		<key>Version</key>
 		<string>1.0</string>
+	</dict>
+	<key>SystemParameters</key>
+	<dict>
+		<key>InjectKexts</key>
+		<string>Yes</string>
+		<key>InjectSystemID</key>
+		<true/>
 	</dict>
 </dict>
 </plist>

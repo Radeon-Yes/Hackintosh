@@ -26,7 +26,7 @@
 # After install
 * Put FakeSMC and AppleIntelE1000e.kext to EFI partition to the kext/10.11/
 * Instal smbios
-* 
+*
 
 # Bootloader
 * Clover 3320
@@ -38,12 +38,14 @@ https://github.com/wilima/Hackintosh/blob/master/CLOVER/config.plist
 
 # Audio
 I have used this guide for my audio - https://www.reddit.com/r/hackintosh/comments/397wl1/guide_realtek_alc_8xx_1150_with_native_applehda/
+Or use MultiBeast ALC892 audio driver
 
 # Internal GPU and GTX560 working together / AirPlay
 I have used this guide - http://www.tonymacx86.com/graphics/128226-integrated-discrete-graphics-working-together.html#post784770
 
-# Native CPU/iGPU Power managment - NOT WORKING NOW
+# Native CPU/iGPU Power managment
 I have used this guide - http://www.tonymacx86.com/mavericks-desktop-support/128926-mavericks-native-cpu-igpu-power-management.html
+Install patched DSDT and SSDT
 
 Additional tweaks:
 
@@ -77,4 +79,3 @@ end;
 
 **config.plist**
 * config.plist/ACPI/SSDT/DropOem/NO (Clover)
-
